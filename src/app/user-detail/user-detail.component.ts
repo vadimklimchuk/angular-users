@@ -27,10 +27,13 @@ export class UserDetailComponent implements OnInit {
     this.userService.getUser(id).subscribe(user => {
       this.user = user;
     });
+
+    localStorage.setItem('userId', id + '');
   }
 
   close(): void {
     this.router.navigate(['']);
+    localStorage.setItem('userId', null);
   }
 
 }

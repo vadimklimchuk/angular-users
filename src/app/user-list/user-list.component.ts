@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { User } from '../user.model';
 import { UserService } from '../user.service';
@@ -13,11 +14,13 @@ import {Observable} from 'rxjs/Observable';
 export class UserListComponent implements OnInit {
   users: Array<User>;
 
-  constructor(private userService: UserService) {
+  constructor(private userService: UserService,
+              private router: Router) {
     this.users = new Array<User>();
   }
 
   ngOnInit() {
+    this.getLocalStorage();
     this.getUsers();
   }
 
@@ -25,5 +28,12 @@ export class UserListComponent implements OnInit {
     this.userService.getUsers().subscribe(users => {
       this.users = users;
     });
+  }
+
+  getLocalStorage() {
+    if (localStorage.userId !== null && !isNaN(localStorage.userId)) {
+      const id = localStorage.getItem('userId');
+      this.router.navigate(['users/' + id]);
+    }
   }
 }
