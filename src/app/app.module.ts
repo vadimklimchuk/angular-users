@@ -9,6 +9,7 @@ import { UserListComponent } from './user-list/user-list.component';
 import { UserService } from './user.service';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { AppRoutingModule } from './/app-routing.module';
     AppComponent,
     HeaderComponent,
     UserListComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 170px;
+    padding: 5px;
     width: 15%;
     margin: 20px;
     margin-top: 80px;
@@ -29,4 +31,12 @@
     color: brown;
     transform: rotateZ(5deg);
     box-shadow: 0px 0px 7px #01fcda;
+}
+
+
+
+@media only screen and (max-width: 420px) {
+    .user-link {
+        width: 80%;
+    }
 }

@@ -16,3 +16,12 @@
     color: indianred;
     text-shadow: 1px 1px 2px indianred;
 }
+
+
+@media only screen and (max-width: 420px) {
+    .header-title {
+        font-size: 1rem;
+        text-align: right;
+        padding-right: 10px;
+    }
+}
