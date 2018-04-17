@@ -28,7 +28,7 @@ export class UserDetailComponent implements OnInit {
       this.user = user;
     });
 
-    localStorage.setItem('userId', id + '');
+    localStorage.setItem('userId', id + '');    //  add in localStorage ID the select user
   }
 
   close(): void {

@@ -30,6 +30,7 @@ export class UserListComponent implements OnInit {
     });
   }
 
+  //  take out from localStorage ID of the selected user
   getLocalStorage() {
     if (localStorage.userId !== null && !isNaN(localStorage.userId)) {
       const id = localStorage.getItem('userId');
