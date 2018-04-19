@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 
 import { UserService } from '../user.service';
-import { User } from '../user.model';
+import { User } from '../user';
 
 
 @Component({
@@ -28,7 +28,7 @@ export class UserDetailComponent implements OnInit {
       this.user = user;
     });
 
-    localStorage.setItem('userId', id + '');    //  add in localStorage ID the select user
+    localStorage.setItem('userId', id + '');    //  add in localStorage ID of the select user
   }
 
   close(): void {

@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
   title = 'A list of users';
   alt = 'Angular';
-  imageLogo = 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/250px-Angular_full_color_logo.svg.png';
+  imageLogo = '../../assets/images/logo.png';
 }
