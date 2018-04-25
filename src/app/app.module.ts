@@ -7,9 +7,12 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserService } from './user.service';
-import { UserDetailComponent } from './user-detail/user-detail.component';
+import { UserDetailComponent } from './user-list/user-detail/user-detail.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FooterComponent } from './footer/footer.component';
+import { UsersFilterPipe } from './user-list/users-filter.pipe';
+import { SearchComponent } from './user-list/search/search.component';
+import { UserResolveService } from './user-list/user-resolve.service';
 
 
 @NgModule({
@@ -18,14 +21,16 @@ import { FooterComponent } from './footer/footer.component';
     HeaderComponent,
     UserListComponent,
     UserDetailComponent,
-    FooterComponent
+    FooterComponent,
+    UsersFilterPipe,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [UserService],
+  providers: [UserService, UserResolveService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

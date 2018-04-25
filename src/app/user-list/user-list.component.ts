@@ -12,6 +12,9 @@ import {Observable} from 'rxjs/Observable';
   styleUrls: ['./user-list.component.css']
 })
 export class UserListComponent implements OnInit {
+  public placeholder = 'Enter user name';
+  public text;
+
   users: Array<User>;
 
   constructor(private userService: UserService,

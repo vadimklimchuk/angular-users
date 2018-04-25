@@ -1,8 +1,13 @@
+<app-search [placeholder]="placeholder"
+            (search)="text = $event"
+></app-search>
 <div class="content">
-  <a *ngFor = "let user of users" 
+  <a *ngFor = "let user of users | usersFilter:text" 
   class="user-link"
-  routerLink="/users/{{user.id}}"
+  [routerLink]="['/users', user.id]"
   >{{user.name}}</a>
 </div>
 
 <router-outlet></router-outlet>
+
+<!-- routerLink="/users/{{user.id}}" -->

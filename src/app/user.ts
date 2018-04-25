@@ -1,4 +1,4 @@
-export class User {
+export interface User {
     id: number;
     name: string;
     username: string;
@@ -6,12 +6,12 @@ export class User {
     address: {
         street: string;
         suite: string;
-        sity: string;
+        city: string;
         zipcode: string;
         geo: {
-            lat: string;
-            lng: string;
-        }
+            lat: number;
+            lng: number;
+        };
     };
     phone: string;
     website: string;
